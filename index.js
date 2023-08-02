@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const serviceAccount = require('./firebaseConfig.json');
+const serviceAccount = require('./config/firebaseConfig.json');
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     databaseURL: 'https://to-do-9b3a3-default-rtdb.asia-southeast1.firebasedatabase.app',
